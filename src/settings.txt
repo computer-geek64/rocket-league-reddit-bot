@@ -1,3 +1,2 @@
 Time: 75
-# [H] 100k Keys
-# [W] $90
+[H] 100k Keys [W] $90
