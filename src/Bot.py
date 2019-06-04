@@ -3,9 +3,12 @@
 # Ashish D'Souza (computer_geek64)
 # June 4th, 2019
 
+import os
 import praw
 from time import sleep
 
+
+os.chdir(os.path.dirname(__file__))
 
 reddit = praw.Reddit("bot")
 
