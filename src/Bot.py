@@ -14,7 +14,6 @@ os.chdir(os.path.dirname(__file__))
 git.Repo(__file__[:__file__.index("rocket-league-reddit-bot") + 24]).remotes.origin.pull()
 
 reddit = praw.Reddit("bot")
-unauthenticated_reddit = praw.Reddit("unauthenticated_bot")
 
 while True:
     with open("settings.txt", "r") as file:
@@ -22,8 +21,7 @@ while True:
 
     delay = int(settings[0][settings[0].index(":") + 1:].strip())
     paragraph = "".join(settings[1:])
-
-    print(unauthenticated_reddit.redditor(str(reddit.user.me())).submissions.new().next().author)
+    reddit.redditor("1m_4_gh0st").submissions.new().next()
 
     exit(0)
 
