@@ -21,7 +21,7 @@ while True:
 
     delay = int(settings[0][settings[0].index(":") + 1:].strip())
     paragraph = "".join(settings[1:])
-    reddit.redditor("1m_4_gh0st").submissions.new().next()
+    reddit.redditor(str(reddit.user.me())).submissions.new().next()
 
     exit(0)
 
