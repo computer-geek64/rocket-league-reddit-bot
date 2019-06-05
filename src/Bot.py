@@ -16,7 +16,6 @@ git.Repo(__file__[:__file__.index("rocket-league-reddit-bot") + 24]).remotes.ori
 reddit = praw.Reddit("bot")
 unauthenticated_reddit = praw.Reddit("unauthenticated_bot")
 
-
 while True:
     with open("settings.txt", "r") as file:
         settings = file.readlines()
