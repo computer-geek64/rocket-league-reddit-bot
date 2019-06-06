@@ -7,6 +7,7 @@ import os
 import git
 import praw
 from time import sleep
+from datetime import datetime
 
 
 os.chdir(os.path.dirname(__file__))
@@ -21,9 +22,16 @@ while True:
 
     delay = int(settings[0][settings[0].index(":") + 1:].strip())
     paragraph = "".join(settings[1:])
-    reddit.redditor(str(reddit.user.me())).submissions.new().next()
 
-    exit(0)
+    posts = reddit.redditor(str(reddit.user.me())).new()
+    for post in posts:
+        if post.subreddit != "BotTesting69":
+            continue
+        break
+    if (datetime.now().timestamp() - post.created_utc) / 60 < 10:
+        sleep(60)
+        continue
 
-    reddit.submission("bkz2do").reply(paragraph)
+    #reddit.submission("bkz2do").reply(paragraph)
+    reddit.submission("bxap66").reply(paragraph)
     sleep(delay * 60)
