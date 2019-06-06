@@ -13,7 +13,9 @@ from datetime import datetime
 os.chdir(os.path.dirname(__file__))
 
 if sum(1 for c in git.Repo(__file__[:__file__.index("rocket-league-reddit-bot") + 24]).iter_commits("origin/master..master")):
+    print(sum(1 for c in git.Repo(__file__[:__file__.index("rocket-league-reddit-bot") + 24]).iter_commits("origin/master..master")))
     git.Repo(__file__[:__file__.index("rocket-league-reddit-bot") + 24]).remotes.origin.pull()
+    print("Updating...")
     exit(0)
 
 reddit = praw.Reddit("bot")
