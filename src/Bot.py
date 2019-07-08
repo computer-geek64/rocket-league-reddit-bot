@@ -14,7 +14,7 @@ from datetime import datetime
 subreddit = "RocketLeagueExchange"
 submission = "bkz2do"
 
-os.chdir(os.path.dirname(sys.argv[0]))
+#os.chdir(os.path.dirname(sys.argv[0]))
 
 #absolute_filepath = os.path.abspath(__file__)
 #git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).remotes.origin.fetch()
