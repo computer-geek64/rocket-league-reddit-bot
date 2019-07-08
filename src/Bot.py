@@ -4,6 +4,7 @@
 # July 7th, 2019
 
 import os
+import sys
 import git
 import praw
 from time import sleep
@@ -13,9 +14,9 @@ from datetime import datetime
 subreddit = "RocketLeagueExchange"
 submission = "bkz2do"
 
-os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(sys.argv[0]))
 
-absolute_filepath = os.path.abspath(__file__)
+#absolute_filepath = os.path.abspath(__file__)
 #git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).remotes.origin.fetch()
 #if sum(1 for c in git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).iter_commits("master..origin/master")):
 #    git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).remotes.origin.pull()
