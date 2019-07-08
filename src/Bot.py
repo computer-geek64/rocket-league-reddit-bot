@@ -19,7 +19,7 @@ absolute_filepath = os.path.abspath(__file__)
 git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).remotes.origin.fetch()
 if sum(1 for c in git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).iter_commits("master..origin/master")):
     git.Repo(absolute_filepath[:absolute_filepath.index("rocket-league-reddit-bot") + 24]).remotes.origin.pull()
-    exit(0)
+    sys.exit(0)
 
 reddit = praw.Reddit("bot")
 
